@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/information_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+
+
+    <TextView
+        android:id="@+id/placeNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/progress_message"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/mapImageButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/mapImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:maxWidth="80dp"
+        android:maxHeight="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/placeNameText"
+        app:srcCompat="@drawable/ic_map_pin"/>
+
+    <TextView
+        android:id="@+id/latLonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/placeNameText"
+        app:layout_constraintStart_toStartOf="@+id/placeNameText"/>
+
+    <ImageView
+        android:id="@+id/placeImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@+id/mapImageButton"
+        app:layout_constraintHeight_max="500dp"
+        app:layout_constraintStart_toStartOf="@+id/placeNameText"
+        app:layout_constraintTop_toBottomOf="@+id/latLonText"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:background="@drawable/rounded_image"/>
+
+    <TextView
+        android:id="@+id/placeInfoText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:scrollbars="vertical"
+        android:text="@string/no_information"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mapImageButton"
+        app:layout_constraintStart_toStartOf="@+id/placeNameText"
+        app:layout_constraintTop_toBottomOf="@+id/placeImageView" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:indeterminateTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/placeImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/placeImageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

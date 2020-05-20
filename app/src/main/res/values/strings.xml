@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NOFOREIGNLAND</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="latLon">Lat: %1$f\nLon: %2$f</string>
+    <string name="progress_message">Downloading content</string>
+    <string name="no_information">No information available</string>
+    <string name="no_internet">Could not connect to server. Unable to download data.</string>
+</resources>
